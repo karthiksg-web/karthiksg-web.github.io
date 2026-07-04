@@ -328,6 +328,7 @@ ul { list-style: none; }
 .about-badge-card i { font-size: 1.5rem; color: var(--yellow-light); }
 .about-badge-card strong { display: block; font-size: 0.95rem; }
 .about-badge-card small { font-size: 0.78rem; opacity: 0.7; font-family: monospace; }
+.about-badge-msme i { color: #c4b5fd; }
 
 .about-content h3 {
   font-size: 1.6rem;

@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuoteForm();
   initScrollTop();
   setFooterYear();
+  initFaq();
 });
 
 /* ── Navbar ─────────────────────────────────────────────── */
@@ -95,7 +96,7 @@ function initScrollAnimations() {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.service-card, .contact-card, .gallery-item').forEach(el => {
+  document.querySelectorAll('.service-card, .contact-card, .gallery-item, .review-card, .trust-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -301,4 +302,31 @@ function initScrollTop() {
 function setFooterYear() {
   const el = document.getElementById('year');
   if (el) el.textContent = new Date().getFullYear();
+}
+
+/* ── FAQ Accordion ──────────────────────────────────────── */
+function initFaq() {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-question');
+    if (!btn) return;
+
+    btn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Close all open items
+      faqItems.forEach(other => {
+        other.classList.remove('active');
+        const otherBtn = other.querySelector('.faq-question');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle clicked item
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 }

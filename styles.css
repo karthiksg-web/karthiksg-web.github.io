@@ -288,6 +288,32 @@ ul { list-style: none; }
   80% { top: 20px; opacity: 0.3; }
 }
 
+/* ===== LOGO PARTICLE CANVAS ===== */
+.hero-particle-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+  width: 100%;
+}
+#logo-particle-canvas {
+  display: block;
+  max-width: 100%;
+  cursor: default;
+}
+/* Screen-reader only — keeps h1 for SEO/accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ===== ABOUT ===== */
 .about { padding: 100px 0; background: var(--gray-50); }
 .about-grid {

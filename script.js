@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTop();
   setFooterYear();
   initFaq();
+  initLogoParticles();
 });
 
 /* ── Navbar ─────────────────────────────────────────────── */

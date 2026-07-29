@@ -288,18 +288,14 @@ ul { list-style: none; }
   80% { top: 20px; opacity: 0.3; }
 }
 
-/* ===== LOGO PARTICLE CANVAS ===== */
-.hero-particle-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 18px;
-  width: 100%;
-}
-#logo-particle-canvas {
+/* ===== HERO HOME LOGO ===== */
+.hero-home-logo {
   display: block;
-  max-width: 100%;
-  cursor: default;
+  max-width: 500px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 8px 30px rgba(0, 0, 0, 0.35));
 }
 /* Screen-reader only — keeps h1 for SEO/accessibility */
 .sr-only {
